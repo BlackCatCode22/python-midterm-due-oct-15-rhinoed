@@ -3,13 +3,13 @@
 tPythonMidtermFa23: Template repo for Pyton Midterm Fall 2023
 
 
-Python Midterm Assignment
+## Python Midterm Assignment
 
 Welcome to your midterm assignment for the Python programming course at Fresno City College! In this assignment, you will be working on a collaborative project with your lab partner(s) to create a program that manages animals arriving at your zoo. You will present your program to your classmates and participate in a code review session to refine your code.
 
-Assignment Description
+### Assignment Description
 
-Program Overview
+#### Program Overview
 Animals are arriving from zoos around the world, and your task is to give them names, calculate their birthdates, and organize them into habitats in your zoo. To accomplish this, you will write a Python program that performs the following tasks:
 
 Reads information about arriving animals from an input text file (arrivingAnimals.txt).
@@ -25,26 +25,33 @@ Limit the input to four animals from each of the four species (16 animals in tot
 Programming Concepts to Demonstrate
 You are required to demonstrate the following programming concepts in your Python program:
 
-Clear, Concise, and Correct Code: Your program must adhere to the class programming style guide.
-File I/O: Utilize various file operations such as creating, writing to, opening, reading from, closing, deleting, and appending to files.
-Exception Handling: Handle standard file I/O exceptions and create custom exceptions to handle adding an animal to a habitat that does not have enough room for the new animal.
-Functions and Lists: Organize the data read from the input zoo document using functions and lists.
-Input - File and String Handling: Parse string data from input files.
-Output - Formatted Output: Generate a report listing zoo animals with their attributes and their habitats (zooPopulation.txt).
+##### Clear, Concise, and Correct Code: 
+Your program must adhere to the class programming style guide.
+#### File I/O: 
+Utilize various file operations such as creating, writing to, opening, reading from, closing, deleting, and appending to files.
+##### Exception Handling:
+Handle standard file I/O exceptions and create custom exceptions to handle adding an animal to a habitat that does not have enough room for the new animal.
+#### Functions and Lists:
+Organize the data read from the input zoo document using functions and lists.
 
-Data Structures:
+##### Input -File and String Handling: Parse string data from input files.
+##### Output - Formatted Output: Generate a report listing zoo animals with their attributes and their habitats (zooPopulation.txt).
+
+#### Data Structures:
 You will use the following data structures in your program.
 
-Python lists and strings.
-An Animal class with derived Hyena, Lion, Tiger, and Bear classes to represent different species of animals.
-Functions:
+- Python lists and strings.
+- An Animal class with derived Hyena, Lion, Tiger, and Bear classes to represent different species of animals.
+
+#### Functions:
 Your program must include at least four functions with the following names:
 
-genBirthDay(): Calculate a birthday from the information received from the originating zoo. Handle cases where the birth season is unknown.
-genUniqueAnimalID(): Calculate a unique ID to uniquely identify each animal in your zoo.
-genAnimalName(): Create an animal name based on input from a community fundraiser (animalNames.txt).
-genZooHabitat(): Assign each new animal to a habitat. Each species must have its own habitat.
-Input Data Format
+- genBirthDay(): Calculate a birthday from the information received from the originating zoo. Handle cases where the birth season is unknown.
+- genUniqueAnimalID(): Calculate a unique ID to uniquely identify each animal in your zoo.
+- genAnimalName(): Create an animal name based on input from a community fundraiser (animalNames.txt).
+- genZooHabitat(): Assign each new animal to a habitat. Each species must have its own habitat.
+
+#### Input Data Format
 The information about arriving animals will arrive in the following format with an unknown number of lines (arrivingAnimals.txt):
 
 4 year old female hyena, born in spring, tan color, 70 pounds, from Friguia Park, Tunisia
@@ -57,11 +64,11 @@ Example Habitat Output (see the text file named: zooPopulation.txt):
 
 Your program will organize animals into their respective habitats and generate a report similar to the following (see zooPopulation.txt for exact specs):
 
-Hyena Habitat:
+###### Hyena Habitat:
 
 Hy01; Kamari; 4 years old; birth date Mar 21, 2018; tan color; female; 70 pounds; from Friguia Park, Tunisia; arrived Sept 27, 2022
 
-Lion Habitat:
+###### Lion Habitat:
 
 Li01; Kiara; 6 years old; birth date Sept 21, 2016; tan color; female; 305 pounds; from Zanzibar, Tanzania; arrived Sept 23, 2022
 
@@ -71,23 +78,23 @@ Starter Names (These are in the file: animalNames.txt):
 
 Here are some starter names for each species. 
 
-Hyena Names:
+###### Hyena Names:
 
 Shenzi, Banzai, Ed, Zig, Bud, Lou, Kamari, Wema, Nne, Madoa, Prince Nevarah
 
-Lion Names:
+###### Lion Names:
 
 Scar, Mufasa, Simba, Kiara, King, Drooper, Kimba, Nala, Leo, Samson, Elsa, Cecil
 
-Bear Names:
+###### Bear Names:
 
 Yogi, Smokey, Paddington, Lippy, Bungle, Baloo, Rupert, Winnie the Pooh, Snuggles, Bert
 
-Tiger Names:
+###### Tiger Names:
 
 Tony, Tigger, Amber, Cosimia, Cuddles, Dave, Jiba, Rajah, Rayas, Ryker
 
-Instructions:
+###### Instructions:
 
 Your Python program should follow the provided guidelines and adhere to the programming concepts outlined in the assignment description. Feel free to use the knowledge and skills you've acquired in this course to complete the assignment.
 
