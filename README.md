@@ -46,10 +46,10 @@ You will use the following data structures in your program.
 #### Functions:
 Your program must include at least four functions with the following names:
 
-- genBirthDay(): Calculate a birthday from the information received from the originating zoo. Handle cases where the birth season is unknown.
-- genUniqueAnimalID(): Calculate a unique ID to uniquely identify each animal in your zoo.
-- genAnimalName(): Create an animal name based on input from a community fundraiser (animalNames.txt).
-- genZooHabitat(): Assign each new animal to a habitat. Each species must have its own habitat.
+- `genBirthDay()`: Calculate a birthday from the information received from the originating zoo. Handle cases where the birth season is unknown.
+- `genUniqueAnimalID()`: Calculate a unique ID to uniquely identify each animal in your zoo.
+- `genAnimalName()`: Create an animal name based on input from a community fundraiser (animalNames.txt).
+- `genZooHabitat()`: Assign each new animal to a habitat. Each species must have its own habitat.
 
 #### Input Data Format
 The information about arriving animals will arrive in the following format with an unknown number of lines (arrivingAnimals.txt):
