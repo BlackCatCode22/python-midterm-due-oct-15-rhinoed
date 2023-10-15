@@ -1,6 +1,62 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/wLWrGMkY)
-# tPythonMidtermFa23
-tPythonMidtermFa23: Template repo for Pyton Midterm Fall 2023
+# My Program
+  
+## Structure
+My program has several modules
+- `main.py`: The main program logic
+- `Animals.py`: The class definitions for `Animal` , `Hyena`, `Lion`,`Bear`, and `Tiger`
+- `Zoo.py`: The class handling zoo habitat and file output
+- `parse_animal_data.py`: Handles the parsing of the text files
+- `interface.py`: provides the menu
+
+## Data Structures Used
+- [x] List
+  - `hyena_strings = [hyena.__str__() for hyena in Zoo.hyena_habitat]`
+- [x] Strings
+  - `f"\n".join(hyena_strings) + f"arrived {Zoo.today}"`
+- [x] Class and subclasses (derived class)
+  - ```python
+    class Lion(Animal):
+    SPECIES = "Lion"
+    NUM_IN_ZOO = 0
+
+    def __init__(self, info_strings):
+        super().__init__(info_strings,Lion.SPECIES)
+    ```
+## Exception Handling
+I use try catch block numerous times in the program. Some examples are when potential errors might occur
+when process the text files, and when creating an animal. I also implemented a custom exception named `HabitatIsFull` which I
+raise when a zoo habitat already has four animals.
+```python
+class HabitatFullError(Exception):
+    """Custom exception for zoo habitat"""
+    def __init__(self, message="Zoo Habitat is full no more animals can be added"):
+        self.message = message
+        super().__init__(self.message)
+```
+## File I/O
+I get the animal names from `animalNames.txt` and process incoming animal form `arrivingAnimal.txt` both `with open('file name', 'r'')` method
+For I output to a file named `zooPopulation.txt` using `with open('file name', 'a')` and write the joined f strings using `file_name.write()` here what the writing the output looks like:
+```python
+        try:
+            with open(zoo_population_report, "a") as output_file:
+                output_file.write(
+                    f"Hyena Habitat:\n\n" +
+                    f"\n".join(hyena_strings) + f"arrived {Zoo.today}" + "\n\n" +
+                    f"Lion Habitat:\n\n" +
+                    f"\n".join(lion_strings) + f"arrived {Zoo.today}" + "\n\n" +
+                    f"Bear Habitat:\n\n" +
+                    f"\n".join(bear_strings) + f"arrived {Zoo.today}" + "\n\n" +
+                    f"Lion Habitat:\n\n" +
+                    f"\n".join(tiger_strings) + f"arrived {Zoo.today}" + "\n\n"
+                )
+        except PermissionError as e:
+            print(e)
+```
+## Notes
+Because of how I structured my `Animal` class and lack of instantiating an instance of it directly
+I sought a way of preventing this from happening. I found `ABC` module could do this while still allowing for the subclassing of `Animal`
+
 
 
 ## Python Midterm Assignment
@@ -18,24 +74,28 @@ Generates a name for each animal using names collected from a recent community f
 Creates a unique ID for each animal to be used in your zoo information system (uniquesID must be inthe format: Hy01, Hy02, Li01, Li02, etc.)
 Assigns each animal to an appropriate habitat.
 Outputs a report (zooPopulation.txt) containing all zoo animals and their information.
-Constraints
+
+#### Constraints
 To limit the scope of the assignment and align it with the current class instruction, please work with the following constraints:
 
-Limit the input to four animals from each of the four species (16 animals in total).
-Programming Concepts to Demonstrate
+- Limit the input to four animals from each of the four species (16 animals in total).
+
+#### Programming Concepts to Demonstrate
 You are required to demonstrate the following programming concepts in your Python program:
 
-##### Clear, Concise, and Correct Code: 
-Your program must adhere to the class programming style guide.
-#### File I/O: 
-Utilize various file operations such as creating, writing to, opening, reading from, closing, deleting, and appending to files.
-##### Exception Handling:
-Handle standard file I/O exceptions and create custom exceptions to handle adding an animal to a habitat that does not have enough room for the new animal.
-#### Functions and Lists:
-Organize the data read from the input zoo document using functions and lists.
+- ##### Clear, Concise, and Correct Code: 
+    - Your program must adhere to the class programming style guide.
+- #### File I/O: 
+    - Utilize various file operations such as creating, writing to, opening, reading from, closing, deleting, and appending to files.
+- ##### Exception Handling:
+    - Handle standard file I/O exceptions and create custom exceptions to handle adding an animal to a habitat that does not have enough room for the new animal.
+- #### Functions and Lists:
+    - Organize the data read from the input zoo document using functions and lists.
 
-##### Input -File and String Handling: Parse string data from input files.
-##### Output - Formatted Output: Generate a report listing zoo animals with their attributes and their habitats (zooPopulation.txt).
+- ##### Input 
+  - -File and String Handling: Parse string data from input files.
+- ##### Output 
+  - -Formatted Output: Generate a report listing zoo animals with their attributes and their habitats (zooPopulation.txt).
 
 #### Data Structures:
 You will use the following data structures in your program.
