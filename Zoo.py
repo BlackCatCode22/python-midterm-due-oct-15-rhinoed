@@ -51,21 +51,21 @@ class Zoo:
     @staticmethod
     def output_to_file():
         """Outputs the zoo population to file"""
-        hyena_strings = [hyena.__str__() for hyena in Zoo.hyena_habitat]
-        lion_strings = [lion.__str__() for lion in Zoo.lion_habitat]
-        bear_strings = [bear.__str__() for bear in Zoo.bear_habitat]
-        tiger_strings = [tiger.__str__() for tiger in Zoo.tiger_habitat]
+        hyena_strings = [hyena.__str__() + f" arrived {Zoo.today}" for hyena in Zoo.hyena_habitat]
+        lion_strings = [lion.__str__() + f" arrived {Zoo.today}" for lion in Zoo.lion_habitat]
+        bear_strings = [bear.__str__() + f" arrived {Zoo.today}" for bear in Zoo.bear_habitat]
+        tiger_strings = [tiger.__str__() + f" arrived {Zoo.today}" for tiger in Zoo.tiger_habitat]
         try:
             with open(zoo_population_report, "a") as output_file:
                 output_file.write(
                     f"Hyena Habitat:\n\n" +
-                    f"\n".join(hyena_strings) + f"arrived {Zoo.today}" + "\n\n" +
+                    f"\n".join(hyena_strings) + "\n\n" 
                     f"Lion Habitat:\n\n" +
-                    f"\n".join(lion_strings) + f"arrived {Zoo.today}" + "\n\n" +
+                    f"\n".join(lion_strings) + "\n\n" 
                     f"Bear Habitat:\n\n" +
-                    f"\n".join(bear_strings) + f"arrived {Zoo.today}" + "\n\n" +
+                    f"\n".join(bear_strings) + "\n\n" 
                     f"Lion Habitat:\n\n" +
-                    f"\n".join(tiger_strings) + f"arrived {Zoo.today}" + "\n\n"
+                    f"\n".join(tiger_strings) + "\n\n"
                 )
         except PermissionError as e:
             print(e)
