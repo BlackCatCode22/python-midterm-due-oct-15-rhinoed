@@ -41,15 +41,15 @@ class Animal(ABC):
     # class str method returns string describing class instance
     def __str__(self):
         try:
-            return (f"{self.id};{self.name}; "
-                    f"{self.age} years old; birthdate {self.birth_string}; "
-                    f"{self.color} color; {self.sex}; {self.weight} pounds; from "
-                    f"{self.zoo_of_origin}; {self.zoo_local};")
+            return (f"{self.id}, {self.name}, "
+                    f"{self.age} years old, birthdate {self.birth_string}, "
+                    f"{self.color} color, {self.sex}, {self.weight} pounds, from "
+                    f"{self.zoo_of_origin}, {self.zoo_local}")
         except AttributeError as ae:
             print(f"class missing attribute: {ae}")
-            return (f"{self.id};{self.name}; {self.color} color; "
-                    f"{self.sex}; {self.weight}; from {self.zoo_of_origin}; "
-                    f"{self.zoo_local};")
+            return (f"{self.id}, {self.name}, {self.color} color, "
+                    f"{self.sex}, {self.weight}, from {self.zoo_of_origin}, "
+                    f"{self.zoo_local}")
 
     @classmethod
     def get_num_in_zoo(cls):

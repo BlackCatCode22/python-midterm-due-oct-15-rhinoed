@@ -70,7 +70,7 @@ class Zoo:
         except PermissionError as e:
             print(e)
 
-        print("write complete")
+        print("\nwrite complete")
 
     @staticmethod
     def process_animals():
